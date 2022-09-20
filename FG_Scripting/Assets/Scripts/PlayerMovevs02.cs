@@ -9,6 +9,7 @@ public class PlayerMovevs02 : MonoBehaviour
     [SerializeField] private float speedV = 2.0f;
     [SerializeField] private float walkingSpeed = 2f;
     [SerializeField] private Rigidbody characterBody;
+    [SerializeField] private PlayerTurn playerTurn;
 
     private float yaw = 0.0f;
     private float pitch = 0.0f;
@@ -21,15 +22,21 @@ void Start()
 }
 
 void Update()
+{
+    bool IsPlayerTurn = playerTurn.IsPlayerTurn();
+    if (IsPlayerTurn)
     {
-        if (Input.GetAxis("Horizontal") !=0)
         {
-            transform.Translate(transform.right * walkingSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), Space.World);
+            if (Input.GetAxis("Horizontal") != 0)
+            {
+                transform.Translate(transform.right * walkingSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), Space.World);
+            }
         }
-        if (Input.GetAxis("Vertical") !=0)
-        {
-            transform.Translate(transform.forward * walkingSpeed * Time.deltaTime * Input.GetAxis("Vertical"), Space.World);
-        }
+
+        if (Input.GetAxis("Vertical") != 0)
+            {
+               transform.Translate(transform.forward * walkingSpeed * Time.deltaTime * Input.GetAxis("Vertical"), Space.World);
+            }
         ReedRotationInput();
 
         if (Input.GetKeyDown(KeyCode.Space) && IsTouchingFloor())
@@ -37,6 +44,7 @@ void Update()
             Jump();
         }
     }
+}
     private void ReedRotationInput()
     {
          yaw += speedH * Input.GetAxis("Mouse X");
