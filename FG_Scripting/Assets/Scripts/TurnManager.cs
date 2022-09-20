@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
@@ -24,6 +26,12 @@ public class TurnManager : MonoBehaviour
             playerOne.SetPlayerTurn(1);
             playerTwo.SetPlayerTurn(2);
         }
+    }
+
+    private void Start()
+    {
+        camera1.SetActive(enabled);
+        camera2.SetActive(!enabled);
     }
 
     private void Update()
@@ -65,12 +73,14 @@ public class TurnManager : MonoBehaviour
         if (currentPlayerIndex == 1)
         {
             currentPlayerIndex = 2;
-            camera1.SetActive(true);
+            camera2.SetActive(enabled);
+            camera1.SetActive(!enabled);
         }
         else if (currentPlayerIndex == 2)
         {
             currentPlayerIndex = 1;
-            camera2.SetActive(true);
+            camera1.SetActive(enabled);
+            camera2.SetActive(!enabled);
         }
     }
 }
