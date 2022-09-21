@@ -32,7 +32,8 @@ void Update()
                 transform.Translate(transform.right * walkingSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), Space.World);
             }
         }
-
+        characterBody.useGravity = true;
+        
         if (Input.GetAxis("Vertical") != 0)
             {
                transform.Translate(transform.forward * walkingSpeed * Time.deltaTime * Input.GetAxis("Vertical"), Space.World);
@@ -43,6 +44,11 @@ void Update()
         {
             Jump();
         }
+    }
+    else
+    {
+        characterBody.velocity = Vector3.zero;
+        characterBody.useGravity = false;
     }
 }
     private void ReedRotationInput()

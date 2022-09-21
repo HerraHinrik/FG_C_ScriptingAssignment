@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
             // Make sure to have "useGravity" toggled off in the rigid body, otherwise it will fall as it flies (unless thats what you want)
 
             // Use either the following line (movement with the rigid body)
-            projectileBody.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
+            //projectileBody.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
 
             // or this one (movement with the transform), both are ok
             //transform.Translate(transform.forward * speed * Time.deltaTime);
