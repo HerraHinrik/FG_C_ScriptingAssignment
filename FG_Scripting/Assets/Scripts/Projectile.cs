@@ -11,15 +11,16 @@ public class Projectile : MonoBehaviour
     public void Initialize()
     {
         isActive = true;
-        Instantiate(projectileBody,)
-       // projectileBody.AddRelativeForce(0,0,500f);
-        // projectileBody.AddForce(transform.forward * 500f + transform.up * 5f + transform.rotation);
+        projectileBody.AddForce(transform.forward * 50f + transform.up * 5f);
+        //projectileBody.AddForce(direction * 700f +transform.up * 300f);
     }
     private void OnCollisionEnter(Collision collision)
     {
+        Destroy(this.gameObject);
         GameObject damageIndicator = Instantiate(damageIndicatorPrefab);
         damageIndicator.transform.position = collision.GetContact(0).point;
     }
+    
 }
 
 

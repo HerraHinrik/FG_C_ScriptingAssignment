@@ -19,6 +19,7 @@ public class CharacterWeapon : MonoBehaviour
                 TurnManager.GetInstance().TriggerChangeTurn();
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = shootingStartPosition.position;
+                newProjectile.transform.rotation = shootingStartPosition.rotation;
                 newProjectile.GetComponent<Projectile>().Initialize();
             }
         }
