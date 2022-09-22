@@ -7,11 +7,9 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Rigidbody projectileBody;
     [SerializeField] private GameObject damageIndicatorPrefab;
-    private bool isActive;
     public void Initialize()
     {
-        isActive = true;
-        projectileBody.AddForce(transform.forward * 50f + transform.up * 5f);
+        projectileBody.AddForce(transform.forward * 350f + transform.up * 5f);
         //projectileBody.AddForce(direction * 700f +transform.up * 300f);
     }
     private void OnCollisionEnter(Collision collision)

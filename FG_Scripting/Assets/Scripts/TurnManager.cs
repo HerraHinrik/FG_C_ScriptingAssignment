@@ -16,6 +16,7 @@ public class TurnManager : MonoBehaviour
     private int currentPlayerIndex;
     private bool waitingForNextTurn;
     private float turnDelay;
+    private float timeLimit;
 
     private void Awake()
     {
@@ -45,6 +46,11 @@ public class TurnManager : MonoBehaviour
                 waitingForNextTurn = false;
                 ChangeTurn();
             }
+        }
+
+        if (!waitingForNextTurn)
+        {
+            timeLimit -= Time.deltaTime;
         }
     }
 

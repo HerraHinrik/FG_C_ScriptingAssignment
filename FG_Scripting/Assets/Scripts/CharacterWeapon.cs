@@ -8,6 +8,7 @@ public class CharacterWeapon : MonoBehaviour
     [SerializeField] private PlayerTurn playerTurn;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform shootingStartPosition;
+    [SerializeField] public float ammo;
 
     private void Update()
     {
@@ -25,3 +26,4 @@ public class CharacterWeapon : MonoBehaviour
         }
     }
 }
+    

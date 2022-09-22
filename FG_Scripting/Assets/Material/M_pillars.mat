@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_pillars
-  m_Shader: {fileID: -6465566751694194690, guid: 4ac6b2c6afe607b4ab2bea3dd8cc2b0b, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: e47cad58bf1e07444af7c9e08b65e382, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -102,6 +102,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 10
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
