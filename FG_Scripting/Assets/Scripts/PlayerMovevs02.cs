@@ -10,6 +10,7 @@ public class PlayerMovevs02 : MonoBehaviour
     [SerializeField] private float walkingSpeed = 2f;
     [SerializeField] private Rigidbody characterBody;
     [SerializeField] private PlayerTurn playerTurn;
+    [SerializeField] private float health, maxHealth = 3f;
 
     private float yaw = 0.0f;
     private float pitch = 0.0f;
@@ -19,8 +20,8 @@ public class PlayerMovevs02 : MonoBehaviour
 void Start()
 {
     Cursor.visible = false;
+    health = maxHealth;
 }
-
 void Update()
 {
     bool IsPlayerTurn = playerTurn.IsPlayerTurn();

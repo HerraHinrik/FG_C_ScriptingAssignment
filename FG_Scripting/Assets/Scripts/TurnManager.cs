@@ -47,11 +47,6 @@ public class TurnManager : MonoBehaviour
                 ChangeTurn();
             }
         }
-
-        if (!waitingForNextTurn)
-        {
-            timeLimit -= Time.deltaTime;
-        }
     }
 
     public bool IsItPlayerTurn(int index)
