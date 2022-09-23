@@ -7,20 +7,17 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private Rigidbody projectileBody;
-    [SerializeField] private float weaponDamage;
+     private float weaponDamage = 1.0f;
     public void Initialize()
     {
         projectileBody.AddForce(transform.forward * 350f + transform.up * 5f);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent<PlayerHealth>)
-        if (PlayerHealth != null)
+        if (collision.collider.CompareTag("Player"))
         {
-            PlayerHealth.TakeDamage(weaponDamage);
+            collision.collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(weaponDamage);
         }
-
-        
         Destroy(this.gameObject);
     }
     
