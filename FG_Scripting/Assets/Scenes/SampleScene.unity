@@ -564,9 +564,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOne: {fileID: 435351726}
   playerTwo: {fileID: 1903603108}
-  timeBetweenTurns: 1.5
+  timeBetweenTurns: 5
   camera1: {fileID: 963194225}
   camera2: {fileID: 1387831451}
+  timeLimit: 5
 --- !u!4 &107450345
 Transform:
   m_ObjectHideFlags: 0
@@ -1159,6 +1160,8 @@ MonoBehaviour:
   walkingSpeed: 10
   characterBody: {fileID: 435351723}
   playerTurn: {fileID: 435351726}
+  health: 0
+  maxHealth: 3
   pitchClamp: 10
 --- !u!114 &435351726
 MonoBehaviour:
@@ -2911,6 +2914,8 @@ MonoBehaviour:
   walkingSpeed: 11
   characterBody: {fileID: 1903603111}
   playerTurn: {fileID: 1903603108}
+  health: 0
+  maxHealth: 3
   pitchClamp: 10
 --- !u!54 &1903603111
 Rigidbody:
@@ -2986,7 +2991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903603107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42, y: 6.499999, z: 12.32}
+  m_LocalPosition: {x: 42, y: 2.14, z: 12.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

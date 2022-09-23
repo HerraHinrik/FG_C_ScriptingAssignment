@@ -12,11 +12,13 @@ public class TurnManager : MonoBehaviour
     [SerializeField] private float timeBetweenTurns;
     [SerializeField] public GameObject camera1;
     [SerializeField] public GameObject camera2;
-
+    [SerializeField]private float timeLimit;
+    private float currentTurnTime;
+    
     private int currentPlayerIndex;
     private bool waitingForNextTurn;
     private float turnDelay;
-    private float timeLimit;
+   
 
     private void Awake()
     {
@@ -37,6 +39,13 @@ public class TurnManager : MonoBehaviour
 
     private void Update()
     {
+        currentTurnTime += Time.deltaTime;
+
+        if (currentTurnTime >= timeLimit)
+        {
+            ChangeTurn();
+        }
+        
         if (waitingForNextTurn)
         {
             turnDelay += Time.deltaTime;
@@ -83,5 +92,7 @@ public class TurnManager : MonoBehaviour
             camera1.SetActive(enabled);
             camera2.SetActive(!enabled);
         }
+
+        currentTurnTime = 0;
     }
 }

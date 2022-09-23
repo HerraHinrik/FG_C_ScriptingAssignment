@@ -17,7 +17,7 @@ public class CharacterWeapon : MonoBehaviour
             bool IsPlayerTurn = playerTurn.IsPlayerTurn();
             if (IsPlayerTurn)
             {
-                TurnManager.GetInstance().TriggerChangeTurn();
+                //TurnManager.GetInstance().TriggerChangeTurn();
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = shootingStartPosition.position;
                 newProjectile.transform.rotation = shootingStartPosition.rotation;
