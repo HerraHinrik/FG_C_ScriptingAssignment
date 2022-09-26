@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Rigidbody projectileBody;
      private float weaponDamage = 1.0f;
+     [SerializeField] public float damageMulti;
     public void Initialize()
     {
         projectileBody.AddForce(transform.forward * 350f + transform.up * 5f);

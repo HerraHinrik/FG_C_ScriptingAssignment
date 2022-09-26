@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameUI : MonoBehaviour
 {
    [SerializeField] private Image progressBar;
+   [SerializeField] private Image progressBar2;
    [SerializeField] private Button button;
    [SerializeField] private TextMeshProUGUI charaterName;
 
