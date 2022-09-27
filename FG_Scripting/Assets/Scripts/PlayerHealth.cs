@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private string playerName;
+    [SerializeField] private Image healthBar;
 
     private float currentHealth;
     // Start is called before the first frame update
@@ -22,5 +24,7 @@ public class PlayerHealth : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        healthBar.fillAmount = currentHealth / maxHealth;
     }
 }
