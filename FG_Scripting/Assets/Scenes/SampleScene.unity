@@ -1021,7 +1021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 7
   playerName: 
-  healthBar: {fileID: 1340696778}
+  healthBar: {fileID: 486459282}
 --- !u!1 &468721731
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,7 +3216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 7
   playerName: 
-  healthBar: {fileID: 486459282}
+  healthBar: {fileID: 1340696778}
 --- !u!1 &1946175959
 GameObject:
   m_ObjectHideFlags: 0
