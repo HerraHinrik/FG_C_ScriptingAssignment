@@ -9,18 +9,7 @@ public class GameUI : MonoBehaviour
 {
    [SerializeField] private Image progressBar;
    [SerializeField] private Image progressBar2;
-   [SerializeField] private Button button;
    [SerializeField] private TextMeshProUGUI charaterName;
 
-   private void Start()
-   {
-      button.onClick.AddListener(OnbuttonPressed);
-   }
-
-   public void OnbuttonPressed()
-   {
-      float randomValue = Random.Range(0f, 1f);
-      progressBar.fillAmount = randomValue;
-   }
-      
+ 
 }
