@@ -308,7 +308,7 @@ MonoBehaviour:
   m_MinValue: -80
   m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: -40
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -669,7 +669,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1340696778}
   progressBar2: {fileID: 486459282}
-  button: {fileID: 0}
   charaterName: {fileID: 0}
 --- !u!114 &119969142
 MonoBehaviour:
@@ -1577,7 +1576,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: cd502c5c09a1c5940ac99b9b415556b6, type: 2}
   m_audioClip: {fileID: 8300000, guid: 62716d3ed563b3c42978e0190511cee9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3618,7 +3617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTurn: {fileID: 1903603108}
-  projectilePrefab: {fileID: 1736170134531425136, guid: f69345af57f58bc41a1788827838d6b9, type: 3}
+  projectilePrefab: {fileID: 1736170134531425136, guid: f1c9a9087b127e44198f8e975a5a81ca, type: 3}
   shootingStartPosition: {fileID: 2053483993}
   ammo: 5
 --- !u!136 &1903603116
