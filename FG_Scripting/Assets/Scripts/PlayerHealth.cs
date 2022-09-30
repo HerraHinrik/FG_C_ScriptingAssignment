@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] private string playerName;
     [SerializeField] private Image healthBar;
+    [SerializeField] private GameObject winMenu;
 
     private float currentHealth;
     // Start is called before the first frame update
@@ -23,6 +24,8 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
+            winMenu.SetActive(true);
+            Time.timeScale = 0f;
         }
 
         healthBar.fillAmount = currentHealth / maxHealth;
